@@ -193,7 +193,7 @@ def construct_job_template(filename: str) -> dict:
                             ],
                             "actions": {
                                 "onEnter": {
-                                    "command": "KeyShotAdaptor",
+                                    "command": "keyshot-openjd",
                                     "args": [
                                         "daemon",
                                         "start",
@@ -207,7 +207,7 @@ def construct_job_template(filename: str) -> dict:
                                     "cancelation": {"mode": "NOTIFY_THEN_TERMINATE"},
                                 },
                                 "onExit": {
-                                    "command": "KeyShotAdaptor",
+                                    "command": "keyshot-openjd",
                                     "args": [
                                         "daemon",
                                         "stop",
@@ -231,7 +231,7 @@ def construct_job_template(filename: str) -> dict:
                     ],
                     "actions": {
                         "onRun": {
-                            "command": "KeyShotAdaptor",
+                            "command": "keyshot-openjd",
                             "args": [
                                 "daemon",
                                 "run",
