@@ -166,6 +166,9 @@ def construct_job_template(filename: str) -> dict:
         "steps": [
             {
                 "name": "Render",
+                "hostRequirements": {
+                    "attributes": [{"name": "attr.worker.os.family", "anyOf": ["windows"]}]
+                },
                 "parameterSpace": {
                     "taskParameterDefinitions": [
                         {"name": "Frame", "type": "INT", "range": "{{Param.Frames}}"}
