@@ -456,6 +456,19 @@ def get_ksp_bundle_files(directory: str) -> Tuple[str, list[str]]:
 
 
 def main(lux):
+    if lux.isPaused():
+        # If rendering is already paused, run the function normally
+        main_inner(lux)
+    else:
+        # If render is not already paused, pause while running then resume
+        try:
+            lux.pause()
+            main_inner(lux)
+        finally:
+            lux.unpause()
+
+
+def main_inner(lux):
     if lux.isSceneChanged():
         result = lux.getInputDialog(
             title="Unsaved changes",
@@ -518,7 +531,10 @@ def main(lux):
         # Add default values for Conda
         major_version, minor_version = lux.getKeyShotDisplayVersion()
         settings.parameter_values.append(
-            {"name": "CondaPackages", "value": f"keyshot={major_version}.* keyshot-openjd=0.3.*"}
+            {
+                "name": "CondaPackages",
+                "value": f"keyshot={major_version}.* keyshot-openjd=0.3.*",
+            }
         )
         settings.parameter_values.append({"name": "CondaChannels", "value": "deadline-cloud"})
 
