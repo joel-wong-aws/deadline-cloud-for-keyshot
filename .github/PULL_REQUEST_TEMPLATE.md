@@ -15,9 +15,6 @@ Fixes: *<insert link to GitHub issue here>*
 *delete text starting here*
 See [DEVELOPMENT.md](https://github.com/aws-deadline/deadline-cloud-for-keyshot/blob/mainline/DEVELOPMENT.md) for information on running tests.
 
-- Have you run the unit tests?
-*delete text ending here*
-
 ### Was this change documented?
 
 *delete text starting here*
