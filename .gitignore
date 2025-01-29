@@ -11,3 +11,6 @@ __pycache__/
 /dependency_bundle/
 /scripts/dependency_bundle/
 /wheels/
+
+*.bip
+*.deadline_render_settings.json

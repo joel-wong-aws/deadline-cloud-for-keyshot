@@ -116,7 +116,7 @@ addopts = [
     "--cov-report=term-missing",
     "--numprocesses=auto"
 ]
-testpaths = [ "test" ]
+testpaths = [ "test/unit" ]
 looponfailroots = [
     "src",
     "test",
@@ -124,6 +124,10 @@ looponfailroots = [
 # looponfailroots is deprecated, this removes the deprecation from the test output
 filterwarnings = [
     "ignore::DeprecationWarning"
+]
+markers = [
+    "submitter: mark a test as using the submitter.",
+    "adaptor: mark test as using the adaptor.",
 ]
 
 [tool.coverage.run]
