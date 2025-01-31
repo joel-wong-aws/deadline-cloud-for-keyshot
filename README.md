@@ -38,7 +38,7 @@ set up, we strongly recommend that you construct a simple test scene that can be
 
 ## Submitter
 
-The KeyShot submitter extension creates a button in KeyShot (`Window` > `Scripting Console` > `Scripts` > `Submit to AWS Deadline Cloud` > `Run`) that can be used to submit jobs to Deadline Cloud. Clicking this button reveals an interface to submit a job to Deadline Cloud.
+The KeyShot submitter extension creates a runnable script in KeyShot (`Window` > `Scripting Console` > `Scripts` > `Submit to AWS Deadline Cloud` > `Run`) that can be used to submit jobs to Deadline Cloud. Using this script reveals an interface to submit a job to Deadline Cloud.
 It automatically determines the files required based on the loaded scene, allows the user to specify render options, builds an
 [Open Job Description template][openjd] that defines the workflow, and submits the job to the farm and queue of your choosing.
 
