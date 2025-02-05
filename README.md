@@ -67,18 +67,18 @@ For most setups, you will also want to install the [Deadline Cloud monitor][dead
 There are two submission modes for the KeyShot submitter which a dialog will ask you to select from before opening the submitter UI.
 
 1. Attach `The scene BIP file and all external files references`
-    - The open scene file and all external files referenced within will be included
-    as job attachments. The submitter will export the open scene to a
-    KSP (KeyShot Package) which turns all file paths in the scene into relative
+    - The open scene file and all external files referenced in the BIP are included
+    as job attachments. The submitter exports the open scene to a
+    KeyShot Package (KSP) that turns all file paths in the scene into relative
     paths and creates a flattened directory with all of the external files directly
     beside the scene file. The KSP is then unzipped, and the new scene file with
-    the relative paths and all external files will be submitted with the job.
+    the relative paths and all external files are submitted with the job.
     The temporary directory used to save the KSP will be deleted after each
     submission.
 1. Attach `Only the scene BIP file`
-    - Only the open scene file will be attached to the submission. The expectation is that any
-    external files referenced within the scene will be available to the workers
-    through network storage or some other method.
+    - Only the open scene file is attached to the submission. Any
+    external files referenced in the scene must be available to the workers
+    through network storage or another method.
 
 ## Adaptor
 
