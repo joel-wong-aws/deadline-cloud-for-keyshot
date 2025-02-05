@@ -46,11 +46,11 @@ There are two installation options:
 1. Windows-only: install the submitter using the official Deadline Cloud submitter installer
 2. Windows or Mac: manually install the submitter
 
-For most setups, you will also need to install the [Deadline Cloud monitor](deadline-cloud-monitor).
+For most setups, you will also need to install the [Deadline Cloud monitor][deadline-cloud-monitor].
 
 ### Install the submitter using the official Deadline Cloud submitter installer
 
-The [official Deadline Cloud submitter installer](deadline-cloud-submitter) for Windows includes the KeyShot submitter. After installing, you can access the submitter in the KeyShot interface via `Window` > `Scripting Console` > `Scripts` > `Submit to AWS Deadline Cloud` > `Run`.
+The [official Deadline Cloud submitter installer][deadline-cloud-submitter] for Windows includes the KeyShot submitter. After installing, you can access the submitter in the KeyShot interface via `Window` > `Scripting Console` > `Scripts` > `Submit to AWS Deadline Cloud` > `Run`.
 
 ### Manually installing the submitter
 
@@ -70,7 +70,7 @@ There are two submission modes for the KeyShot submitter which a dialog will ask
 1. Attach `The scene BIP file and all external files references`
     - The open scene file and all external files referenced within will be included
     as job attachments. The submitter will export the open scene to a
-    KSP(KeyShot Package) which turns all file paths in the scene into relative
+    KSP (KeyShot Package) which turns all file paths in the scene into relative
     paths and creates a flattened directory with all of the external files directly
     beside the scene file. The KSP is then unzipped, and the new scene file with
     the relative paths and all external files will be submitted with the job.
@@ -98,7 +98,7 @@ Linux support is experimental and can only be done on customer-managed fleets.
 
 ### Service-managed fleets
 
-On [service-managed fleets](service-managed-fleets), the KeyShot adaptor is automatically available via the `deadline-cloud` Conda channel with the [default Queue Environment][default-queue-environment].
+On [service-managed fleets][service-managed-fleets], the KeyShot adaptor is automatically available via the `deadline-cloud` Conda channel with the [default Queue Environment][default-queue-environment].
 
 ### Customer-managed fleets
 
@@ -141,13 +141,13 @@ You can also set the `KEYSHOT_EXECUTABLE` to point to the KeyShot executable. Th
 
 ### Service-Managed Fleets
 
-[Usage based licensing](usage-based-licensing) for KeyShot 2023 and 2024 is available on Deadline Cloud service-managed fleets with no additional setup.
+[Usage based licensing][usage-based-licensing] for KeyShot 2023 and 2024 is available on Deadline Cloud service-managed fleets with no additional setup.
 
 If you prefer to use your own licensing for service-managed fleets, you can also [connect service-managed fleets to a custom license server](https://docs.aws.amazon.com/deadline-cloud/latest/developerguide/smf-byol.html).
 
 ### Customer-Managed Fleets
 
-You can use [usage based licensing](usage-based-licensing) on customer-managed fleets by [connecting them to a license endpoint](https://docs.aws.amazon.com/deadline-cloud/latest/developerguide/cmf-ubl.html).
+You can use [usage based licensing][usage-based-licensing] on customer-managed fleets by [connecting them to a license endpoint](https://docs.aws.amazon.com/deadline-cloud/latest/developerguide/cmf-ubl.html).
 
 You can also use your own licensing for customer-managed fleets.
 
