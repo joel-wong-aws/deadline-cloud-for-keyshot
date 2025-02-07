@@ -44,14 +44,12 @@ It automatically determines the files required based on the loaded scene, allows
 [Open Job Description template][openjd] that defines the workflow, and submits the job to the farm and queue of your choosing.
 
 There are two installation options:
-1. Windows-only: install the submitter using the official Deadline Cloud submitter installer
-2. Windows or Mac: manually install the submitter
+1. Windows-only: the [official Deadline Cloud submitter installer][deadline-cloud-submitter]
+2. Windows or Mac: manual installation
 
-For most setups, you will also need to install the [Deadline Cloud monitor][deadline-cloud-monitor].
+After installing, you can access the submitter in the KeyShot interface via `Window` > `Scripting Console` > `Scripts` > `Submit to AWS Deadline Cloud` > `Run`.
 
-### Install the submitter using the official Deadline Cloud submitter installer
-
-The [official Deadline Cloud submitter installer][deadline-cloud-submitter] for Windows includes the KeyShot submitter. After installing, you can access the submitter in the KeyShot interface via `Window` > `Scripting Console` > `Scripts` > `Submit to AWS Deadline Cloud` > `Run`.
+For most setups, you will also want to install the [Deadline Cloud monitor][deadline-cloud-monitor].
 
 ### Manually installing the submitter
 
@@ -161,6 +159,16 @@ Job Bundle to a location of your choice. If you want to submit the job from the 
 submitter plug-in then you can use the [Deadline Cloud application][deadline-cloud-client] to submit that bundle to your farm.
 
 [job-bundle]: https://docs.aws.amazon.com/deadline-cloud/latest/developerguide/build-job-bundle.html
+
+## Versioning
+
+This package's version follows [Semantic Versioning 2.0](https://semver.org/), but is still considered to be in its
+initial development, thus backwards incompatible versions are denoted by minor version bumps. To help illustrate how
+versions will increment during this initial development stage, they are described below:
+
+1. The MAJOR version is currently 0, indicating initial development.
+2. The MINOR version is currently incremented when backwards incompatible changes are introduced to the public API.
+3. The PATCH version is currently incremented when bug fixes or backwards compatible changes are introduced to the public API.
 
 ## Security
 

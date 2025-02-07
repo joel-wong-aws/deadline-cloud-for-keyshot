@@ -5,7 +5,6 @@ This documentation provides guidance on developer workflows for working with the
 Table of Contents:
 
 * [Software Architecture](#software-architecture)
-* [Versioning](#versioning)
 * [Development Environment Setup](#development-environment-setup)
 * [The Development Loop](#the-development-loop)
    * [Submitter Development Workflow](#submitter-development-workflow)
@@ -28,16 +27,6 @@ This package has two active branches:
 
 
 You'll need to update your worker host with your updated adaptor code to test the changes.
-
-## Versioning
-
-This package's version follows [Semantic Versioning 2.0](https://semver.org/), but is still considered to be in its
-initial development, thus backwards incompatible versions are denoted by minor version bumps. To help illustrate how
-versions will increment during this initial development stage, they are described below:
-
-1. The MAJOR version is currently 0, indicating initial development.
-2. The MINOR version is currently incremented when backwards incompatible changes are introduced to the public API.
-3. The PATCH version is currently incremented when bug fixes or backwards compatible changes are introduced to the public API.
 
 ## Development Environment Setup
 
