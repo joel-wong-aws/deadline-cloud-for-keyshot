@@ -53,7 +53,7 @@ For most setups, you will also want to install the [Deadline Cloud monitor][dead
 
 ### Manually installing the submitter
 
-1. Run `pip install deadline[gui]`
+1. Run `pip install "deadline[gui]"`
 2. Copy the file `deadline-cloud-for-keyshot/src/deadline/keyshot_submitter/Submit to AWS Deadline Cloud.py` to the KeyShot scripts folder for your OS:
     - Windows (choose one):
         - User scripts folder e.g. `%USERPROFILE%/Documents/KeyShot/Scripts`
