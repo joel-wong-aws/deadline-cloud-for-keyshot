@@ -74,9 +74,15 @@ def run_keyshot_adaptor_test(
     job_params.pop("CondaChannels", None)
     job_params.pop("CondaPackages", None)
 
-    os.environ["DEADLINE_CLOUD_PYTHONPATH"] = ";".join(
-        [str(Path(__file__).parent.parent.parent.parent / "src")]
-    )
+    paths_to_add_to_deadline_cloud_pythonpath = [
+        str(Path(__file__).parent.parent.parent.parent / "src"),  # deadline import
+    ]
+    if "VIRTUAL_ENV" in os.environ:
+        paths_to_add_to_deadline_cloud_pythonpath.append(
+            str(Path(os.environ["VIRTUAL_ENV"]).parent / "integ" / "Lib" / "site-packages")  # openjd import
+        )
+
+    os.environ["DEADLINE_CLOUD_PYTHONPATH"] = os.pathsep.join(paths_to_add_to_deadline_cloud_pythonpath)
 
     for step in template["steps"]:
         output = run_command(
@@ -161,6 +167,9 @@ def assert_expected_job_bundle_and_generated_job_bundle_are_equal(
             content1 = content1.replace("PATH_TO_BE_REPLACED", prefix_path)
             content1 = replace_backslashes(content1)
             content2 = replace_backslashes(content2)
+            if file == "parameter_values.json":
+                # generalize to all versions of KeyShot and the adaptor
+                content2 = re.sub(r"keyshot=202[3-9].\* keyshot-openjd=0.\d.\*", "keyshot=2024.* keyshot-openjd=0.3.*", content2)
 
             content1_loaded = json.loads(content1)
             content2_loaded = json.loads(content2)
