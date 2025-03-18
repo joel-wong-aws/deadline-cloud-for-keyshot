@@ -76,6 +76,14 @@ def run_keyshot_adaptor_test(
 
     paths_to_add_to_deadline_cloud_pythonpath = [
         str(Path(__file__).parent.parent.parent.parent / "src"),  # deadline import
+        str(Path(os.environ["PROGRAMFILES"]) / "Python311" / "Lib"),  # Python 3.11 standard libraries like http
+        str(Path(os.environ["PROGRAMFILES"]) / "Python311" / "DLLs"),  # Some DLLs
+        str(Path(os.environ["PROGRAMFILES"]) / "Python311" / "Lib" / "site-packages"),  # Python 3.11 standard libraries
+        str(Path(os.environ["PROGRAMFILES"]) / "Python311" / "Lib" / "site-packages" / "isapi"),  # Some pywin32 DLLs
+        str(Path(os.environ["PROGRAMFILES"]) / "Python311" / "Lib" / "site-packages" / "pythonwin"),  # Some pywin32 DLLs
+        str(Path(os.environ["PROGRAMFILES"]) / "Python311" / "Lib" / "site-packages" / "pywin32_system32"),  # Some pywin32 DLLs
+        str(Path(os.environ["PROGRAMFILES"]) / "Python311" / "Lib" / "site-packages" / "win32"),  # win32file
+        str(Path(os.environ["PROGRAMFILES"]) / "Python311" / "Lib" / "site-packages" / "win32" / "lib"),  # pywin32_bootstrap
     ]
     if "VIRTUAL_ENV" in os.environ:
         paths_to_add_to_deadline_cloud_pythonpath.append(
